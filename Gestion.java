@@ -1,5 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 public class Gestion implements ActionListener {
     @Override
