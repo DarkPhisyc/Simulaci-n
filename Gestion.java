@@ -83,7 +83,7 @@ public class Gestion implements ActionListener {
             }
                 break;
             case "4":
-                System.out.println("ALGORITMNO LINEAL");
+                System.out.println("ALGORITMO LINEAL");
                 int c, modulo;
                 System.out.print("Ingresa el valor de la semilla Xi: ");
                 semilla = lector.nextInt();
@@ -106,9 +106,7 @@ public class Gestion implements ActionListener {
 
                     double numeroPseudo = (double) semilla / modulo;
 
-                    System.out.println((i + 1) +
-                            ". Xi = " + semilla +
-                            " -> Ri = " + numeroPseudo);
+                    System.out.println((i + 1) + ". Xi = " + semilla + " -> Ri = " + numeroPseudo);
                 }
                 break;
             case "5":
