@@ -41,6 +41,33 @@ public class Gestion implements ActionListener {
                     
                 break;
             case "2":
+                long x0, x1, multiplicacion, nuevo;
+                int num,m;
+                System.out.println("Escribe la primer semilla");
+                x0 = lector.nextLong();
+                System.out.println("Escribe la segunda semilla");
+                x1=lector.nextLong();
+                System.out.println("Escribe cuantos numero pseudo-aleatorios necesitas");
+                num = lector.nextInt();
+                System.out.println("\n RESULTADOS ");
+                for (int i = 1; i <= num; i++) {
+                    multiplicacion = x0 * x1;
+                    String cadena = String.valueOf(multiplicacion);
+                    while (cadena.length() < 4 || cadena.length() % 2 != 0) {
+                        cadena = "0" + cadena;
+                    }
+                    m = cadena.length() / 2;
+                    String centro = cadena.substring(m - 2, m + 2);
+                    System.out.println(i+"." + "("+x0+")"+"("+x1 + ")"+"= " + cadena + " -> Centro = " + centro +" " + "N.pseudoaleatorio= 0." + centro );
+                    nuevo = Long.parseLong(centro);
+                    if (x0 == 0) {
+                        System.out.println("El algoritmo terminó en cero.");
+                        break;
+                    }
+                    x0=x1;
+                    x1=nuevo;
+                }
+
                 break;
             case "3":
 
