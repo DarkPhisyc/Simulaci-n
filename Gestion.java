@@ -141,6 +141,26 @@ public class Gestion implements ActionListener {
             case "6":
                 break;
             case "7":
+                long X0;
+                long x;
+                long m1;
+                int n1;
+                double r;
+
+                System.out.println("=== Algoritmo Blum Blum Shub ===");
+                System.out.print("Ingrese la semilla inicial X0: ");
+                X0 = lector.nextLong();
+                System.out.print("Ingrese el valor del modulo m: ");
+                m1 = lector.nextLong();
+                System.out.print("Ingrese la cantidad de numeros a generar n: ");
+                n1 = lector.nextInt();
+                x = X0;
+                System.out.println("\nResultados:");
+                for(int i = 0; i < n1; i++){
+                    x = (x * x) % m1;
+                    r = (double)x / (m1 - 1);
+                    System.out.println("X" + (i+1) + " = " + x + "   r" + i + " = " + r);
+                }
                 break;
             default:
                 break;
